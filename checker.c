@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-DEFINE 0 false
-DEFINE 1 true
 
 int initialchecks(char *arg);
 
@@ -25,7 +23,7 @@ int main(int argc, char **argv)
         return (0);
     while (argv[i])
     {
-        if (initialchecks(argv[i]) == false)
+        if (initialchecks(argv[i]) == 0)
             return(0);
         i++;
     }

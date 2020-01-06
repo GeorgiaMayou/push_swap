@@ -29,6 +29,29 @@ int otherchar(char *arg)
     return (false);
 }
 
+int samenum(char *arg)
+{
+    int check
+    int i;
+    
+    check = 0;
+    i = 1;
+    while (arg[i] != '\0')
+    {
+        while (arg[check])
+        {
+            while (arg[i])
+            {
+                if (arg[check] == arg[i])
+                    return(0);
+                i++;
+            }
+            check++;
+            i = check + 1;
+        }
+    }
+}
+
 int initialchecks(char *arg)
 {
     if (otherchar(arg) == true)
