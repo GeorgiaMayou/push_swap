@@ -12,8 +12,6 @@
 
 #include "libft.h"
 #include "get_next_line.h"
-DEFINE 0 false
-DEFINE 1 true
 
 int otherchar(char *arg)
 {
@@ -22,11 +20,11 @@ int otherchar(char *arg)
     i = 0
     while (arg[i] != '\0')
     {
-        if (arg[i] < '0' && arg[i] > '9' && isspace(arg[i]) == false)
-            return (true);
+        if (arg[i] < '0' && arg[i] > '9' && isspace(arg[i]) == 0)
+            return (1);
         i++;
     }
-    return (false);
+    return (0);
 }
 
 int samenum(char *arg)
@@ -43,17 +41,18 @@ int samenum(char *arg)
             while (arg[i])
             {
                 if (arg[check] == arg[i])
-                    return(0);
+                    return(1);
                 i++;
             }
             check++;
             i = check + 1;
         }
     }
+    return (0);
 }
 
 int initialchecks(char *arg)
 {
-    if (otherchar(arg) == true)
-        return (false);
+    if (otherchar(arg) == 1 || samenum(arg) == 1)
+        return (0);
 }
