@@ -17,7 +17,7 @@ int otherchar(char *arg)
 {
     int i;
 
-    i = 0
+    i = 0;
     while (arg[i] != '\0')
     {
         if (arg[i] < '0' && arg[i] > '9' && isspace(arg[i]) == 0)
@@ -29,7 +29,7 @@ int otherchar(char *arg)
 
 int samenum(char *arg)
 {
-    int check
+    int check;
     int i;
     
     check = 0;
